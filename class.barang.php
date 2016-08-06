@@ -234,9 +234,9 @@ class barang{
 			<td><?php print("Rp ".$harga_jual.".-"); ?></td>
 			<td><?php print($row['jumlah']) ?></td>
 			<td>
-				<a href=""><button type="button" class="btn btn-info">Detail</button></a>
-    <a href=""><button type="button" class="btn btn-warning">Edit</button></a>
-    <a href=""><button type="button" class="btn btn-danger">Hapus</button></a>
+			 <a href="detail.php?id=<?php print($row['id_barang']); ?>"><button type="button" class="btn btn-info">Detail</button></a>
+			 <a href="edit.php?edit_id=<?php print($row['id_barang']); ?>"><button type="button" class="btn btn-warning">Edit</button></a>
+			 <a href="hapus.php?hapus_id=<?php print($row['id_barang']); ?>"><button type="button" class="btn btn-danger">Hapus</button></a>
 			</td>
 			</tr>
 			<?php
