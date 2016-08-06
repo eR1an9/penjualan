@@ -57,26 +57,17 @@ if (isset($_POST['btn-update'])) {
 
 	}elseif ($_POST['nama1']!="null"){
 		if ($_POST['jumlah']==$jumlah) {
-			echo "Jumlah tidak berubah<br>";
-			echo "Barang = ". $_POST['nama1'];
-			echo "<br>Harga = ". $_POST['harga1'];
-			echo "<br>Jumlah = ". $_POST['jumlah'];
 			if (isset($_POST['nama'])) {				
 				$table = 'tb_barang';
 				if (extract($barang->getID($id_barang,$table))) {
-					echo "<br>id_barang = ". $id_barang;
-					echo "<br> jumlah = $jumlah + ".$_POST['jumlah']." = ". ($jumlah+$_POST['jumlah']);
-					echo "<br>". $sisa = ($jumlah+$_POST['jumlah']);
-					echo "<br>".$nama_brg;
+					$sisa = ($jumlah+$_POST['jumlah']);
+					// echo "<br>".$nama_brg;
 					if ($barang->update($id_barang,$nama_brg,$jenis,$suplier,$harga_modal,$harga_jual,$jumlah,$sisa)) {
-						echo "<br>update jumlah nama";
-						echo "<br> Nama = ". $_POST['nama'];
+						/*echo "<br>update jumlah nama";
+						echo "<br> Nama = ". $_POST['nama'];*/
 						$table = 'tb_barang';
 						if (extract($barang->getName($_POST['nama1'],$table))) {
-							echo "<br>".$nama_brg;
-							echo "<br>".$id_barang;
 							$sisa = $jumlah-$_POST['jumlah'];
-							echo "<br>".$id_barang;
 							if ($barang->update($id_barang,$nama_brg,$jenis,$suplier,$harga_modal,$harga_jual,$jumlah,$sisa)) {
 							$total_harga=$harga_jual*$_POST['jumlah'];
 								$laba = $harga_jual-$harga_modal;
@@ -191,7 +182,6 @@ function fetch_select(val)
 				<select class="form-control" name="nama1" onchange="fetch_select(this.value);">
 					<option value="null">Nama Barang</option>
 					<?php 
-					echo $nama;
 					$query = "SELECT * FROM tb_barang group by nama_brg";
 					$data = "nama_brg";
 					$barang->option($query,$data);
