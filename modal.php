@@ -60,7 +60,7 @@
           <form method="post">
             <div class="form-group">
               <label>Tanggal</label>
-              <input type="date" name="tanggal" class="form-control" autocomplete="off">
+              <input type="text" name="tgl" id="tgl" class="form-control" autocomplete="off">
             </div>
             <div class="form-group">
               <label>Nama Barang</label>
@@ -96,3 +96,8 @@
 
     </div>
   </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#tgl").datepicker({dateFormat : 'yy/mm/dd'});
+    });
+  </script>
