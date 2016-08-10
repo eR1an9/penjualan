@@ -11,7 +11,6 @@ if (isset($_POST['btn-update'])) {
 	$table = 'barang_terjual';
 	extract($barang->getID($edit_id,$table));
 	if ($_POST['nama1']=="null") {
-		echo "edit di sini <br>";
 
 		if ($_POST['jumlah']==$jumlah) {
 			$_POST['nama'] . "<br>";
