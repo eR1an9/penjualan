@@ -5,8 +5,10 @@
 <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
- <script src="js/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+ 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
 	<script type="text/javascript">
 
 function fetch_select(val)
@@ -48,8 +50,8 @@ function fetch_select(val)
 
 			<ul class="nav navbar-nav navbar-right">
 				<li><a id="pesan_sedia" href="#" data-toggle="modal" data-target="#modalpesan"><span class='glyphicon glyphicon-comment'></span>  Pesan</a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+<!-- 				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
 			</ul>
 
 		</div>
